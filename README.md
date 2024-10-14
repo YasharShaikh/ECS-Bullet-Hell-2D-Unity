@@ -73,6 +73,9 @@ Destroy enemies while avoiding their bullets.
 
 
 
+**Contact**
+--------------
+
 * **NAME: Yashar Shaikh**
 * **[Github: https://github.com/YasharShaikh]**
 * **[Linkdin: https://www.linkedin.com/in/yashar-shaikh/]**
