@@ -72,15 +72,9 @@ Destroy enemies while avoiding their bullets.
 3. Build and run the project
 
 
-**License**
---------
-
-
 [Insert license information]
 
 
-**Contact**
-----------
-
-
-[Your Name]
+[NAME: Yashar Shaikh]
+[Github: https://github.com/YasharShaikh]
+[Linkdin: https://www.linkedin.com/in/yashar-shaikh/]
