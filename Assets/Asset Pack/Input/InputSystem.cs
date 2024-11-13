@@ -6,7 +6,7 @@ public partial class InputSystem : SystemBase
     private PlayerControls playerControls;
 
 
-    protected override void OnCreate()
+    protected override void OnCreate() // works as Start() in Monobehaviour
     {
         if(!SystemAPI.TryGetSingleton(out InputComponent input))
         {
@@ -19,7 +19,7 @@ public partial class InputSystem : SystemBase
 
     }
 
-    protected override void OnUpdate()
+    protected override void OnUpdate() // works as Update() in Monobehaviour
     {
         Vector2 moveVector = playerControls.Player.Move.ReadValue<Vector2>();
         Vector2 mousePosition = playerControls.Player.MousePos.ReadValue<Vector2>();

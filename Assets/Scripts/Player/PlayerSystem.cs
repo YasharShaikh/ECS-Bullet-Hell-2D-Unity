@@ -40,7 +40,6 @@ public partial struct PlayerSystem : ISystem
 
 
         _entityManager.SetComponentData(_playerEntity, playerTransform);
-
     }
 
     private void Shoot(ref SystemState state)
@@ -71,7 +70,7 @@ public partial struct PlayerSystem : ISystem
 
 
                 float randomOffset = UnityEngine.Random.Range(-_playerComponent.bulletSpread, _playerComponent.bulletSpread);
-                bulletTransform.Position = playerTransform.Position + (playerTransform.Right() * 1.65f) + (bulletTransform.Up()*randomOffset);
+                bulletTransform.Position = playerTransform.Position + (playerTransform.Right() * 1.65f) + (-bulletTransform.Up() *randomOffset);
 
                 ECB.SetComponent(bulletEntity, bulletTransform);
                 ECB.Playback(_entityManager);

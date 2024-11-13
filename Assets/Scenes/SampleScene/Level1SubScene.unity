@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &838267027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,11 +154,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1824422783027596471, guid: ef5419d7b0dc9184c9dbf86d005e4ae9, type: 3}
   spawnRadius: 50
-  distanceFromPlayer: 2
-  timeBetweenSpawn: 200
+  distanceFromPlayer: 5
+  timeBetweenSpawn: 2
   enemySpawnRate: 40
   enemyIncrementRate: 5
-  maxEnemySpawn: 2
+  maxEnemySpawn: 200
 --- !u!4 &838267028
 Transform:
   m_ObjectHideFlags: 0
@@ -253,7 +253,7 @@ Transform:
   m_GameObject: {fileID: 1821813768}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.133, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -274,7 +274,7 @@ MonoBehaviour:
   moveSpeed: 5
   bullet: {fileID: 4671181635744843663, guid: 22970092272a0cc4bb924aeeb214392b, type: 3}
   bulletCount: 10
-  bulletSpread: 5
+  bulletSpread: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
