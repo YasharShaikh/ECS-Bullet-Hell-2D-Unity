@@ -1,81 +1,16 @@
-**ECS-Bullet-Hell-2D-Game**
-==========================
+# ECS Bullet Hell 2D
 
+A Unity DOTS prototype that separates player movement, enemy spawning, and bullet updates into ECS systems. It’s a small example of how authoring components and a SubScene feed a data-oriented gameplay loop.
 
-**Overview**
-------------
+## Run the prototype
 
+1. Open the repository root in **Unity 2022.3.10f1**. Unity resolves **Entities**, **Entities Graphics**, and **Unity Physics** at version **1.0.16** from the [package manifest](Packages/manifest.json).
+2. Open [SampleScene](Assets/Scenes/SampleScene.unity) and enter Play Mode. The level content is organized under [Level1SubScene](Assets/Scenes/SampleScene/Level1SubScene.unity).
 
-A simple 2D game demonstrating Unity's Entity Component System (ECS) architecture. This project showcases ECS implementation for:
+## Code tour
 
-
-* Player movement
-* Enemy generation
-* Bullet creation
-
-
-**Objective**
-------------
-
-
-Destroy enemies while avoiding their bullets.
-
-
-**Features**
-------------
-
-
-* **ECS Architecture**: Efficient entity management using Unity's ECS
-* **Player Movement**: Simple player movement using ECS
-* **Enemy Generation**: Automated enemy spawning using ECS
-* **Bullet Creation**: Bullet generation and movement using ECS
-
-
-**Technical Details**
--------------------
-
-
-* **Unity Version**: 2020.3.14f1
-* **ECS Packages**: 
-	+ Unity.Entities 0.17.0
-	+ Unity.Physics 0.17.0
-
-
-**Gameplay**
-------------
-
-
-* Move the player using arrow keys
-* Avoid enemy bullets
-* Destroy enemies
-
-
-**Project Structure**
--------------------
-
-
-* `Assets/Scripts`: ECS-related scripts
-	+ `PlayerMovementSystem.cs`: Handles player movement
-	+ `EnemySpawnSystem.cs`: Spawns enemies
-	+ `BulletCreationSystem.cs`: Creates bullets
-	+ `EnemyAI.cs`: Simple enemy AI
-* `Assets/Scenes`: Game scene
-* `Assets/Prefabs`: Player, enemy, and bullet prefabs
-
-
-**How to Run**
---------------
-
-
-1. Clone the repository
-2. Open the project in Unity 2020.3.14f1
-3. Build and run the project
-
-
-
-**Contact**
---------------
-
-* **NAME: Yashar Shaikh**
-* **[Github: https://github.com/YasharShaikh]**
-* **[Linkdin: https://www.linkedin.com/in/yashar-shaikh/]**
+| Area | Entry point |
+| --- | --- |
+| Player | [PlayerSystem.cs](Assets/Scripts/Player/PlayerSystem.cs) updates player behavior using ECS data. |
+| Enemies | [EnemySpawnerSystem.cs](Assets/Scripts/Enemy/EnemySpawnerSystem.cs) and [EnemySystem.cs](Assets/Scripts/Enemy/EnemySystem.cs) cover spawning and enemy behavior. |
+| Bullets | [BulletSystem.cs](Assets/Scripts/Bullets/BulletSystem.cs) and [BulletLifeTimeComponent.cs](Assets/Scripts/Bullets/BulletLifeTimeComponent.cs) are the starting points for bullet updates and lifetime data. |
